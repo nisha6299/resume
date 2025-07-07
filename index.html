@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section id="sec">
+    <div id="img">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80" alt="">
+    </div>
+    <div id="img-text">
+      <h1>All Products</h1>
+    </div>
+  </section>
+
+  <header>
+    <h1 id="productCount">Total Products: 0</h1>
+    <div>
+      <select id="sortSelect">
+        <option value="">Sort by Price</option>
+        <option value="lowToHigh">Low to High</option>
+        <option value="highToLow">High to Low</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="cart" id="cartMessage">
+    <div class="container">
+      <div class="content">
+        <img class="img2" src="image/loadingimage.png" alt="Empty Cart">
+        <h1 class="h1">Oops... looks like the shelves are empty!</h1>
+        <p class="para">Smash that "Load Products" button to fix this tragic situation</p>
+        <button class="btn" onclick="fetchProducts()">Load Products</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="loadingMsg" style="text-align:center; margin: 20px 0; display:none;">Loading...</div>
+  <main id="product-container"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
